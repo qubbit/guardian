@@ -10,7 +10,7 @@ We'll use Phoenix for this tutorial since most folks will be using it. There is 
 
 This tutorial was based on [this article](https://medium.com/@tylerpachal/session-authentication-example-for-phoenix-1-3-using-guardian-1-0-beta-a228c78478e6) by [Tyler Pachal](https://github.com/TylerPachal).
 
-We'll also use the default token type of JWT. Again with this you don't _have_ to use JWT for your token backend. See the [token documentation](tokens-start.html) for more information.
+We'll also use the default token type of JWT. Again with this you don't _have_ to use JWT for your token backend. See the [token documentation](../tokens/start-tokens.html) for more information.
 
 Authentication consists of a challenge phase (prove who you are) and then followed by a verification phase (has this actor proven who they are?). Guardian looks after the second part for you. It's up to your application to implement the challenge phase after which Guardian will do the rest. In this tutorial we'll use [comeonin](https://github.com/riverrun/comeonin) with [bcrypt](https://en.wikipedia.org/wiki/Bcrypt) for the challenge phase.
 

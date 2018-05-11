@@ -19,10 +19,10 @@ Guardians functionality has two core pieces.
 
 It also provides
 
-* [Custom Tokens](tokens-start.html)
-* [Plug integration](plug-start.html)
-* [Phoenix integration](phoenix-start.html)
-* [Permissions](permissions-start.html)
+* [Custom Tokens](../tokens/start-tokens.md)
+* [Plug integration](../plug/start-plug.md)
+* [Phoenix integration](../phoenix/start-phoenix.md)
+* [Permissions](../permissions/start-permissions.md)
 
 ## Tokens in your application
 

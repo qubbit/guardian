@@ -10,7 +10,7 @@ This limitation forced only a single type of token could be used for your entire
 
 ## Usage
 
-Guardian is used to encode and decode tamper proof tokens for the purpose of authentication. For integrations see [the plug guide](plug-start.html) and/or [the Phoenix guide](phoenix-start.html). If you're using Plug or Phoenix you probably won't need to drop down to this level but from time to time it's useful.
+Guardian is used to encode and decode tamper proof tokens for the purpose of authentication. For integrations see [the plug guide](../plug/start-plug.md) and/or [the Phoenix guide](../phoenix/start-phoenix.md). If you're using Plug or Phoenix you probably won't need to drop down to this level but from time to time it's useful.
 
 ### Basics
 
@@ -41,7 +41,7 @@ For example:
 
 ## Basic Setup
 
-The most basic setup for an implementation module consists of `use Guardian` passing the atom of your otp app. See [JWT implementation](tokens-jwt-setup.html) for specific information about setting up for JWT.
+The most basic setup for an implementation module consists of `use Guardian` passing the atom of your otp app. See [JWT implementation](../jwt/start.md) for specific information about setting up for JWT.
 
 ```elixir
 defmodule MyApp.TokenImpl do
@@ -58,14 +58,14 @@ end
 ```
 
 This setup will use your configuration and the default options.
-If you want to change your token backend, you can use the `:token_module` option in your [configuration](introduction-implementation.html#configuration).
+If you want to change your token backend, you can use the `:token_module` option in your [configuration](#configuration).
 
 The functions `subject_for_token` and `resource_from_claims` are the only two functions that must be implemented. They are effectively opposites of one another.
 
 * `subject_for_token` - provide the identifier to be encoded into your token that you will use in `resource_from_claims` to lookup the resource
 * `resource_from_claims` - using the identifier provided by `subject_for_token` find the associated resource
 
-All other [callbacks](introduction-implementation#callbacks) have a default noop and their implementations and are optional.
+All other [callbacks](#callbacks) have a default noop and their implementations and are optional.
 
 `subject_for_token` provides the `sub` field (in JWT parlance) which identifies the subject which is usually the resource to use. The subject field can be anything that helps you identify which resource is logged in. Some examples:
 

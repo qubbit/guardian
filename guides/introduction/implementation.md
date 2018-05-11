@@ -3,7 +3,7 @@
 Implementation modules are the heart of how you interact with Guardian in your application.
 Almost all functions for using Guardian are done via your implementation module.
 
-They encapsulate the configuration and behaviour that you specify and utilize a [token](tokens-start.html) backend to implement the details of the type of token you've chosen (default JWT).
+They encapsulate the configuration and behaviour that you specify and utilize a [token](../tokens/start-tokens.md) backend to implement the details of the type of token you've chosen (default JWT).
 
 Previous versions of Guardian used the Guardian module directly which was very limiting.
 This limitation forced only a single type of token could be used for your entire application and made customization difficult, verbose and somewhat confusing.
